@@ -11,6 +11,29 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+// const titleCased = tutorials = tutorials.map(obj => {
+//   return tutorials.map()
+// })
+
+
+const titleCased = (input) => {
+  return tutorials.map( line => {
+    const tokens = line.split(' ');
+    const capitalizedTokens =
+      tokens.map( token => token.charAt(0).toUpperCase() + token.slice(1) );
+    const response = capitalizedTokens.join(' ');
+    return response;
+  });
 }
+
+// function titleCased(arr) {
+//   tutorials.map(function(tutorials) {
+//     return tutorials.length.indexOf(arr.toTitleCase()) === 0}
+//   )
+//} 
+
+/////////// .map() example off of mozilla //////////
+// let reformattedArray = kvArray.map(obj => {
+//   let rObj = {}
+//   rObj[obj.key] = obj.value
+//   return rObj
